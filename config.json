@@ -1,52 +1,28 @@
 {
-		"inbounds": 
-		"outbounds": 
-				{
-						"mux": {
-								"enabled": false
-						},
-						"protocol": "vmess",
-						"settings": {
-								"vnext": [
-										{
-												"address": "",
-												"port": 8080,
-												"users": [
-														{
-																"alterId": 0,
-																"id": "fa1277d7-3cb8-4b54-b580-4170f742ddb0",
-																"level": 8,
-																"security": "auto"
-														}
-												]
-										}
-								]
-						},
-						"streamSettings": {
-								"network": "ws",
-								"security": "tls",
-								"tlsSettings": {
-										"allowInsecure": true,
-										"serverName": ""
-								},
-								"wsSettings": {
-										"headers": {
-												"Host": ""
-										},
-										"path": "/baK32iBh/"
-								}
-						},
-						"tag": "VMESS"
-				}
-		],
-		"policy": {
-				"levels": {
-						"8": {
-								"connIdle": 300,
-								"downlinkOnly": 1,
-								"handshake": 4,
-								"uplinkOnly": 1
-						}
-				}
-		}
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "2f0f01c3-d197-4aef-9364-17e18bd0c74c",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/baK32iBh"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
